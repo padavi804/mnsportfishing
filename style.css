@@ -75,7 +75,7 @@
   
   /* Hero Section */
   #hero {
-    background-image: url('hero-image.jpg');
+    background-image: url('/public/photos/IMG_8500.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -192,7 +192,7 @@
     }
   }
   .parallax {
-    background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+    background-image: url('/public/photos/IMG_8500.jpg'); /* Replace with your image path */
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
