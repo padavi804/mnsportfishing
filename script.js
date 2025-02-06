@@ -112,3 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionButtons = document.querySelectorAll('.accordion-button');
+  
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      
+      // Toggle active class
+      button.classList.toggle('active');
+      content.classList.toggle('active');
+      
+      // Close other accordion items
+      accordionButtons.forEach(otherButton => {
+        if (otherButton !== button) {
+          otherButton.classList.remove('active');
+          otherButton.nextElementSibling.classList.remove('active');
+        }
+      });
+    });
+  });
+});

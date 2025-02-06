@@ -139,6 +139,7 @@
   
   .charter {
     background-color: #f4f4f4;
+    opacity: .8;
     padding: 20px;
     border-radius: 10px;
     width: 30%;
@@ -229,7 +230,7 @@
   .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -290,3 +291,62 @@
   .carousel-indicator.active {
     background: white;
   }
+  /* Desktop Styles */
+@media (min-width: 768px) {
+  .carousel {
+    max-width: 80%;
+  }
+
+  .carousel-slide img {
+    height: 800px;
+  }
+}
+/* FAQ Accordion Styles */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 15px 20px;
+  background: #f8f8f8;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #eee;
+}
+
+.accordion-button::after {
+  content: '+';
+  font-size: 1.5rem;
+}
+
+.accordion-button.active::after {
+  content: '-';
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px 20px;
+  background: white;
+}
+
+.accordion-content.active {
+  display: block;
+}
