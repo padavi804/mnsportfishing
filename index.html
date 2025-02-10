@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MN Sportfishing</title>
+    <link rel="icon" href="public/photos/logo.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
       <div class="logo">
-        <img src="public/photos/logo.png" alt="MN Sportfishing Logo" />
+        <a href="/"> <img src="public/photos/logo.png" alt="MN Sportfishing Logo" >
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#charters">Fishing Charters</a></li>
-          <li><a href="#rates">Rates</a></li>
+          <li><a href="#charters">Charters</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -122,20 +122,49 @@
     <!-- Testimonials Section -->
     <section id="testimonials">
       <h2>What Our Clients Say</h2>
-      <div class="testimonial">
-        <p>
-          "Great communication before the trip, and even better experience on
-          the water. Went with our 3 kids and they had a blast! Ended up getting
-          some good catches, and some amazing family memories."
-        </p>
-        <strong>- Ryan D.</strong>
-      </div>
-      <div class="testimonial">
-        <p>
-          "Very knowledgeable of the lake, put us on fish and provided great
-          customer service. Everything was top notch. "
-        </p>
-        <strong>- Scott E.</strong>
+      <div class="testimonial-carousel">
+        <div class="testimonial-carousel-container">
+          <div class="testimonial-slide">
+            <p>
+              "Great communication before the trip, and even better experience
+              on the water. Went with our 3 kids and they had a blast! Ended up
+              getting some good catches, and some amazing family memories."
+            </p>
+            <strong>- Ryan D.</strong>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "Very knowledgeable of the lake, put us on fish and provided great
+              customer service. Everything was top notch."
+            </p>
+            <strong>- Scott E.</strong>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "Our Captain (Jamie Cotner) was fantastic. Very professional,
+              knowledgeable, and personable. Whether you are a seasoned
+              fisherman of a beginner I highly recommend him and his mate. One
+              of the better guides I have spent time with"
+            </p>
+            <strong>- William M.</strong>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "The Captain and crew did a wonderful job explaining what would
+              happen on our fishing adventure. It was a perfect day. We WILL be
+              doing this again on the Aluminauti! We were even given suggestions
+              on places to dine. I would without reservations recommended this
+              trip to ANYONE!"
+            </p>
+            <strong>- Brenda R.</strong>
+          </div>
+        </div>
+        <button class="testimonial-button prev">&lt;</button>
+        <button class="testimonial-button next">&gt;</button>
+        <div class="testimonial-nav">
+          <button class="testimonial-indicator active"></button>
+          <button class="testimonial-indicator"></button>
+        </div>
       </div>
     </section>
 
@@ -205,8 +234,9 @@
           <button class="accordion-button">Where do we meet?</button>
           <div class="accordion-content">
             <p>
-              We depart from Canal Park in Duluth, MN. The dock is located next to the historic William A. Irvin
-              and can be accessed from the parking lot behind Hoops Brewing.
+              We depart from Canal Park in Duluth, MN. The dock is located next
+              to the historic William A. Irvin and can be accessed from the
+              parking lot behind Hoops Brewing.
             </p>
           </div>
         </div>

@@ -1,9 +1,10 @@
-// Toggle the navigation menu on mobile
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector("header nav ul");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.querySelector("header nav ul");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
 });
 
 // Add a class to show the menu on mobile when the hamburger is clicked
@@ -113,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const accordionButtons = document.querySelectorAll('.accordion-button');
   
@@ -132,6 +132,40 @@ document.addEventListener('DOMContentLoaded', () => {
           otherButton.nextElementSibling.classList.remove('active');
         }
       });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Testimonials Carousel
+  const tContainer = document.querySelector('.testimonial-carousel-container');
+  const tSlides = document.querySelectorAll('.testimonial-slide');
+  const tPrevButton = document.querySelector('.testimonial-button.prev');
+  const tNextButton = document.querySelector('.testimonial-button.next');
+  const tIndicators = document.querySelectorAll('.testimonial-indicator');
+  let tCurrentSlide = 0;
+
+  function updateTestimonialSlide() {
+    tContainer.style.transform = `translateX(-${tCurrentSlide * 100}%)`;
+    tIndicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === tCurrentSlide);
+    });
+  }
+
+  tPrevButton.addEventListener('click', () => {
+    tCurrentSlide = (tCurrentSlide - 1 + tSlides.length) % tSlides.length;
+    updateTestimonialSlide();
+  });
+
+  tNextButton.addEventListener('click', () => {
+    tCurrentSlide = (tCurrentSlide + 1) % tSlides.length;
+    updateTestimonialSlide();
+  });
+
+  tIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      tCurrentSlide = index;
+      updateTestimonialSlide();
     });
   });
 });
