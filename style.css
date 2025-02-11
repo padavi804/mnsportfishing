@@ -164,19 +164,51 @@ header {
 
   .charter-options {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
   }
   
   .charter {
-    background-color: #f4f4f4;
-    padding: 20px;
+    background: #fff;
     border-radius: 10px;
-    width: 30%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .charter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
   
   .charter h3 {
+    margin: 15px 0 10px;
+    color: #0077b6;
+  }
+  
+  .charter h4 {
+    margin: 5px 0 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .charter .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6347;
     margin-bottom: 10px;
+  }
+  
+  .charter p {
+    margin: 10px 0;
+  }
+  
+  .charter .cta-btn {
+    margin-top: 10px;
   }
   
   table {
@@ -524,4 +556,46 @@ header {
 
 .testimonial-indicator.active {
   background: #fff;
+}
+
+#privacy {
+    margin-top: 80px;
+    padding: 40px;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.policy-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #0077b6;
+}
+
+.policy-content p {
+    margin-bottom: 20px;
+}
+
+#terms {
+    margin-top: 80px;
+    padding: 40px;
+}
+
+.terms-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.terms-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #0077b6;
+}
+
+.terms-content p {
+    margin-bottom: 20px;
 }
